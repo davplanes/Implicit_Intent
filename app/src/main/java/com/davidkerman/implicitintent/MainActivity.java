@@ -45,14 +45,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.msg) {
             return true;
+
         } else if (id == R.id.wa) {
             return true;
+
         } else if (id == R.id.othermsgs) {
             return true;
+
         } else if (id == R.id.nav) {
             return true;
+
+        } else if (id == R.id.gm) {
+            return true;
+
+        } else if (id == R.id.wz) {
+            return true;
+
         } else if (id == R.id.web) {
             return true;
+
         } else if (id == R.id.others) {
             return true;
         }

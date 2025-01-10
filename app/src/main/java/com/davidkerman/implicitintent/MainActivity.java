@@ -52,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.othermsgs) {
             return true;
 
+        } else if (id == R.id.map) {
+            return true;
+
+        } else if (id == R.id.loc) {
+            return true;
+
         } else if (id == R.id.nav) {
-            return true;
-
-        } else if (id == R.id.gm) {
-            return true;
-
-        } else if (id == R.id.wz) {
             return true;
 
         } else if (id == R.id.web) {

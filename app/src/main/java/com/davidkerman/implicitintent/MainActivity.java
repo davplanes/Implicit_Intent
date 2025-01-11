@@ -1,5 +1,6 @@
 package com.davidkerman.implicitintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton icon1;
     private ImageButton icon2;
     private ImageButton icon3;
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,36 @@ public class MainActivity extends AppCompatActivity {
         icon1 = findViewById(R.id.icon1);
         icon2 = findViewById(R.id.icon2);
         icon3 = findViewById(R.id.icon3);
+
+        intent = new Intent(this, activity_intent.class);
+
+        SetListeners();
+    }
+
+    private void SetListeners() {
+        icon1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent.putExtra("IMAGE_CODE", icon1.getTag().toString());
+                startActivity(intent);
+            }
+        });
+
+        icon2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent.putExtra("IMAGE_CODE", icon2.getTag().toString());
+                startActivity(intent);
+            }
+        });
+
+        icon3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent.putExtra("IMAGE_CODE", icon3.getTag().toString());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

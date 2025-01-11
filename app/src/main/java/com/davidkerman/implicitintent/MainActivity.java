@@ -1,10 +1,14 @@
 package com.davidkerman.implicitintent;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton icon3;
 
     private Intent intent;
+
+    private String icon1code;
+    private String icon2code;
+    private String icon3code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +63,11 @@ public class MainActivity extends AppCompatActivity {
         icon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("IMAGE_CODE", icon1.getTag().toString());
+                Drawable drawable = icon1.getDrawable();
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
+                Bitmap bitmap = bitmapDrawable.getBitmap();
+                intent.putExtra("image", bitmap);
+                intent.putExtra("image_code", icon1code);
                 startActivity(intent);
             }
         });
@@ -61,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
         icon2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("IMAGE_CODE", icon2.getTag().toString());
+                Drawable drawable = icon2.getDrawable();
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
+                Bitmap bitmap = bitmapDrawable.getBitmap();
+                intent.putExtra("image", bitmap);
+                intent.putExtra("image_code", icon2code);
                 startActivity(intent);
             }
         });
@@ -69,7 +87,11 @@ public class MainActivity extends AppCompatActivity {
         icon3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent.putExtra("IMAGE_CODE", icon3.getTag().toString());
+                Drawable drawable = icon3.getDrawable();
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
+                Bitmap bitmap = bitmapDrawable.getBitmap();
+                intent.putExtra("image", bitmap);
+                intent.putExtra("image_code", icon3code);
                 startActivity(intent);
             }
         });
@@ -93,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
             icon1.setImageResource(R.drawable.wap);
             icon2.setImageResource(R.drawable.wanp);
 
+            icon1code = "wap";
+            icon2code = "wanp";
+
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);
             icon3.setVisibility(View.INVISIBLE);
@@ -104,6 +129,10 @@ public class MainActivity extends AppCompatActivity {
             icon1.setImageResource(R.drawable.sms);
             icon2.setImageResource(R.drawable.mail);
             icon3.setImageResource(R.drawable.msg);
+
+            icon1code = "sms";
+            icon2code = "mail";
+            icon3code = "msg";
 
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);
@@ -120,6 +149,9 @@ public class MainActivity extends AppCompatActivity {
             icon1.setImageResource(R.drawable.mappcoords);
             icon2.setImageResource(R.drawable.mappadrs);
 
+            icon1code = "mappcoords";
+            icon2code = "mappadrs";
+
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);
             icon3.setVisibility(View.INVISIBLE);
@@ -130,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
         else if (id == R.id.nav) {
             icon1.setImageResource(R.drawable.gm);
             icon2.setImageResource(R.drawable.wz);
+
+            icon1code = "gm";
+            icon2code = "wz";
 
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);
@@ -142,6 +177,9 @@ public class MainActivity extends AppCompatActivity {
             icon1.setImageResource(R.drawable.web);
             icon2.setImageResource(R.drawable.yt);
 
+            icon1code = "web";
+            icon2code = "yt";
+
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);
             icon3.setVisibility(View.INVISIBLE);
@@ -153,6 +191,10 @@ public class MainActivity extends AppCompatActivity {
             icon1.setImageResource(R.drawable.camera);
             icon2.setImageResource(R.drawable.dial);
             icon3.setImageResource(R.drawable.clck);
+
+            icon1code = "camera";
+            icon2code = "dial";
+            icon3code = "clck";
 
             icon1.setVisibility(View.VISIBLE);
             icon2.setVisibility(View.VISIBLE);

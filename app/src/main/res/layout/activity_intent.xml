@@ -24,12 +24,13 @@
 
     <EditText
         android:id="@+id/userinput1"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="101dp"
+        android:layout_width="360dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter input 1:"
         android:inputType="text"
         android:textColor="#673AB7"
@@ -40,12 +41,13 @@
 
     <EditText
         android:id="@+id/userinput2"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginStart="101dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter input 2:"
         android:inputType="text"
         android:textColor="#673AB7"
@@ -56,12 +58,13 @@
 
     <EditText
         android:id="@+id/userinput3"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginStart="101dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Enter input 3:"
         android:inputType="text"
         android:textColor="#673AB7"
@@ -86,24 +89,24 @@
         android:id="@+id/dial2"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="122dp"
         android:text="2"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dial3"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="122dp"
+        android:layout_marginEnd="101dp"
         android:text="3"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -122,24 +125,24 @@
         android:id="@+id/dial5"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="182dp"
         android:text="5"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dial6"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="182dp"
+        android:layout_marginEnd="101dp"
         android:text="6"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -158,24 +161,24 @@
         android:id="@+id/dial8"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="242dp"
         android:text="8"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dial9"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="242dp"
+        android:layout_marginEnd="101dp"
         android:text="9"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -194,24 +197,24 @@
         android:id="@+id/dial0"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="302dp"
         android:text="0"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dialhash"
         android:layout_width="65dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="302dp"
+        android:layout_marginEnd="101dp"
         android:text="#"
         android:textColor="#FF9800"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/dial2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -219,11 +222,11 @@
         android:layout_width="209dp"
         android:layout_height="185dp"
         android:layout_marginStart="101dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="101dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userinput2"
+        app:layout_constraintTop_toBottomOf="@+id/userinput3"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
